@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Gamstop"
+rootProject.name = "GreenStop"
 include(":app")
  
