@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamstop">
-
+        <activity
+            android:name=".login_page"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -20,11 +22,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Registered your new Activity here -->
+        </activity> <!-- Registered your new Activity here -->
         <activity android:name=".frontend.pre_resgistration.PreRegistrationActivity" />
-
     </application>
 
 </manifest>
