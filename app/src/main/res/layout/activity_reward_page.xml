@@ -13,7 +13,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
         android:orientation="vertical"
-    android:background="#E4E8C8">
+    android:background="#F5F7EE">
 
     <TextView
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
             android:layout_margin="15dp"
             android:layout_weight="1"
             android:background="@drawable/rounded_corner"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="#F5F7EE"
             android:gravity="center"
             android:text="1000"
             android:textSize="20dp" />

@@ -7,7 +7,7 @@
     android:layout_marginTop="15dp"
     android:layout_marginRight="18dp"
     android:layout_marginLeft="18dp"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="#F5F7EE"
     android:orientation="horizontal">
 
 
