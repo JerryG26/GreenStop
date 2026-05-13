@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="160dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="12dp"
-    android:layout_marginVertical="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
+    android:layout_marginBottom="16dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/foodNameText"
-            android:layout_width="match_parent"
+            android:id="@+id/foodName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Food Name"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:text="Grilled Chicken Salad"
+            android:textColor="#212121"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/foodCalories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/proteinText"
-            android:layout_width="match_parent"
+            android:id="@+id/foodDescription"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Protein: 0g"
             android:layout_marginTop="8dp"
-            android:textColor="#388E3C" />
+            android:text="High protein, low carb mix."
+            android:textColor="#757575"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/foodCalories"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/foodName" />
 
         <TextView
-            android:id="@+id/caloriesText"
-            android:layout_width="match_parent"
+            android:id="@+id/foodCalories"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0 kcal"
-            android:layout_marginTop="4dp" />
-    </LinearLayout>
+            android:background="#FFF8E1"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:text="350 kcal"
+            android:textColor="#FF8F00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-</com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamstop.databinding.ItemCalorieRecordBinding
 
-class CalorieRecordAdapter(private var records: List<CalorieRecord>) :
+class CalorieRecordAdapter(private var records: List<CalorieEntity>) :
     RecyclerView.Adapter<CalorieRecordAdapter.RecordViewHolder>() {
 
     class RecordViewHolder(val binding: ItemCalorieRecordBinding) : RecyclerView.ViewHolder(binding.root)
@@ -24,7 +24,7 @@ class CalorieRecordAdapter(private var records: List<CalorieRecord>) :
 
     override fun getItemCount(): Int = records.size
 
-    fun updateData(newRecords: List<CalorieRecord>) {
+    fun updateData(newRecords: List<CalorieEntity>) {
         records = newRecords
         notifyDataSetChanged()
     }

@@ -2,165 +2,91 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    tools:context=".frontend.pre_resgistration.PreRegistrationActivity">
+    android:background="#F5F7F2">
 
-    <!-- Title -->
     <TextView
-        android:id="@+id/tvDreamBodyTitle"
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DREAM BODY"
-        android:textSize="24sp"
+        android:layout_marginTop="48dp"
+        android:text="Set Your Goal"
+        android:textColor="#2E7D32"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Body Type Segmented Buttons -->
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggleGroupBodyType"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:singleSelection="true"
-        app:selectionRequired="true"
-        app:checkedButton="@+id/btnLean"
-        app:layout_constraintTop_toBottomOf="@id/tvDreamBodyTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnThin"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="THIN" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLean"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LEAN" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMuscle"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MUSCLE" />
-
-    </com.google.android.material.button.MaterialButtonToggleGroup>
-
-    <!-- Height Label & Input -->
     <TextView
-        android:id="@+id/tvHeightLabel"
+        android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HEIGHT"
-        android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@id/toggleGroupBodyType"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilHeight"
-        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        app:suffixText="cm"
-        app:boxBackgroundMode="outline"
-        app:layout_constraintTop_toBottomOf="@id/tvHeightLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etHeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:text="180"
-            android:textAlignment="center"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/tvWeightLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="WEIGHT"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tilHeight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilWeight"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:suffixText="kg"
-        app:boxBackgroundMode="outline"
-        app:layout_constraintTop_toBottomOf="@id/tvWeightLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etWeight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
-            android:text="90"
-            android:textAlignment="center"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <TextView
-        android:id="@+id/tvAgeLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AGE"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/tilWeight"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilAge"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:boxBackgroundMode="outline"
-        app:layout_constraintTop_toBottomOf="@id/tvAgeLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="20"
-            android:textAlignment="center"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Submit Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSubmit"
-        android:layout_width="200dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="40dp"
-        android:text="SUBMIT"
+        android:text="Help us customize your menu"
+        android:textColor="#757575"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:cornerRadius="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tilAge"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/radioCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitleText">
+
+        <RadioGroup
+            android:id="@+id/goalRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <RadioButton
+                android:id="@+id/radioWeightLoss"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Weight Loss"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioMuscleGain"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Muscle Gain"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/radioMaintenance"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Healthy Maintenance"
+                android:textColor="#212121"
+                android:textSize="18sp" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#4CAF50"
+        android:elevation="8dp"
+        android:text="Save Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

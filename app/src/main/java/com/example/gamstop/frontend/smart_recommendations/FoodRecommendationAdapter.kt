@@ -18,9 +18,9 @@ class FoodRecommendationAdapter(private var foodList: List<FoodItem>) :
 
     override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {
         val food = foodList[position]
-        holder.binding.foodNameText.text = food.name
-        holder.binding.proteinText.text = "Protein: ${food.protein}g"
-        holder.binding.caloriesText.text = "${food.calories} kcal"
+        holder.binding.foodName.text = food.name
+        holder.binding.foodDescription.text = "Protein: ${food.protein}g"
+        holder.binding.foodCalories.text = "${food.calories} kcal"
     }
 
     override fun getItemCount(): Int = foodList.size
