@@ -89,7 +89,6 @@
             android:textAlignment="center"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Weight Label & Input -->
     <TextView
         android:id="@+id/tvWeightLabel"
         android:layout_width="wrap_content"
@@ -120,8 +119,6 @@
             android:text="90"
             android:textAlignment="center"/>
     </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Age Label & Input -->
     <TextView
         android:id="@+id/tvAgeLabel"
         android:layout_width="wrap_content"

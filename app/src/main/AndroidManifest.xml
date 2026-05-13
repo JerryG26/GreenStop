@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,36 +15,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamstop">
+
         <activity
             android:name=".registration"
-            android:exported="true" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+            android:exported="false" />
 
         <activity
             android:name=".reward_page"
+            android:exported="false" />
+
+        <activity
+            android:name=".login_page"
+            android:exported="false" />
+
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".login_page"
-            android:exported="true">
-
-        </activity>
+            android:name=".frontend.pre_resgistration.PreRegistrationActivity"
+            android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity> <!-- Registered your new Activity here -->
-        <activity android:name=".frontend.pre_resgistration.PreRegistrationActivity" />
+            android:name=".frontend.smart_recommendations.SmartRecommendationsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".frontend.navigation.GpsActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
