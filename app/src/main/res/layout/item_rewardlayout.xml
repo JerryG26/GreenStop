@@ -29,10 +29,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:text="You have 20 points to redeem"
-            android:padding="10dp"
             android:fontFamily="sans-serif"
-            android:textSize="18dp"/>
+            android:padding="10dp"
+            android:text="You have 20 points to redeem"
+            android:textStyle="bold"
+            android:textSize="15dp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

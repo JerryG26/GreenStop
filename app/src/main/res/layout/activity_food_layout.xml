@@ -24,6 +24,19 @@
             android:paddingBottom="15dp"
             android:textSize="40dp"
             android:textColor="@color/white"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/food_placeholder"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Papaya Pad Thai"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="30dp"
+            />
 
     </LinearLayout>
     <RelativeLayout
