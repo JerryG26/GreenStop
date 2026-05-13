@@ -1,0 +1,93 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+    android:background="@drawable/top_rounded_corner"
+        android:weightSum="4"
+    android:paddingTop="5dp"
+        android:backgroundTint="#FFFFFF"
+        >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+                android:scaleType="fitCenter"
+                app:tint="#FF657C30"
+                android:src="@drawable/navbar_icon_home"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+                app:tint="#FF657C30"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/navbar_icon_eat"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                app:tint="#FF657C30"
+                android:src="@drawable/navbar_icon_gift"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.75"
+                android:paddingLeft="5dp"
+                app:tint="#FF657C30"
+                android:paddingRight="5dp"
+                android:src="@drawable/navbar_icon_account"/>
+        </LinearLayout>
+
+    </LinearLayout>
+

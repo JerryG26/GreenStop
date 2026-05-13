@@ -28,20 +28,35 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="115dp"
             android:layout_height="match_parent"
+            android:layout_marginTop="115dp"
             android:background="#9AB457"
             android:elevation="10dp"
             android:orientation="vertical">
 
-        <include layout="@layout/item_rewardlayout"/>
-        <include layout="@layout/item_rewardlayout"/>
-        <include layout="@layout/item_rewardlayout"/>
-        <include layout="@layout/item_rewardlayout"/>
+            <include layout="@layout/item_rewardlayout" />
+
+            <include layout="@layout/item_rewardlayout" />
+
+            <include layout="@layout/item_rewardlayout" />
+
+            <include layout="@layout/item_rewardlayout" />
 
 
         </LinearLayout>
     </LinearLayout>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="570dp"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="10dp">
+
+        <include layout="@layout/nav_bar_layout"/>
+
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -75,5 +90,7 @@
             android:text="1000"
             android:textSize="20dp" />
 
+
     </LinearLayout>
+
 </FrameLayout>
