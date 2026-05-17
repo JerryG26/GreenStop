@@ -43,7 +43,7 @@
             android:layout_height="78dp"
             android:layout_weight="0.75"
             android:paddingLeft="1dp"
-            android:paddingRight="dp"
+            android:paddingRight="0dp"
             android:scaleType="fitCenter"
             android:src="@drawable/calendar_icon"
             app:tint="#4CAF50" />
