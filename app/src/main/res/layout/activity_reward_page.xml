@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#9AB457"
+    android:background="#4CAF50"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -18,7 +18,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#FF657C30"
+        android:background="#4CAF50"
         android:text="←"
         android:gravity="center"
         android:paddingRight="300dp"
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="115dp"
-            android:background="#9AB457"
+            android:background="#4CAF50"
             android:elevation="10dp"
             android:orientation="vertical">
 
@@ -45,15 +45,15 @@
 
         </LinearLayout>
     </LinearLayout>
+
     <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="570dp"
         android:backgroundTint="#FFFFFF"
         android:elevation="10dp">
 
-        <include layout="@layout/nav_bar_layout"/>
+        <include layout="@layout/nav_bar_layout" />
 
     </RelativeLayout>
 
@@ -64,7 +64,7 @@
         android:layout_marginTop="85dp"
         android:layout_marginRight="15dp"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="#9AB457"
+        android:backgroundTint="#4CAF50"
         android:elevation="10dp"
         android:textColor="@color/white">
 

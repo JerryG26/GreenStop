@@ -29,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:text="You have 20 points to redeem"
+            android:text="RewardTitle"
             android:padding="10dp"
             android:fontFamily="sans-serif"
             android:textSize="18dp"/>
@@ -37,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.2"
-            android:text="Click for more details"
+            android:text="RewardDetails"
             android:paddingLeft="10dp"
             android:textSize="10dp"/>
 
