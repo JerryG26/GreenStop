@@ -16,8 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamstop">
         <activity
-            android:name=".calendar_calorie_tracker"
+            android:name=".foods_showcase"
             android:exported="false" />
+        <activity
+            android:name=".restaurant_page"
+            android:exported="false" />
+        <activity
+            android:name=".home"
+            android:exported="false" />
+        <activity
+            android:name=".main_activity_container"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".calendar_calorie_tracker"
+            android:exported="true" />
         <activity
             android:name=".food_layout"
             android:exported="false" />
@@ -32,13 +50,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".frontend.pre_resgistration.PreRegistrationActivity"
             android:exported="false" />

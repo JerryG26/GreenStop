@@ -1,86 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#4CAF50"
-    tools:context=".MainActivity">
+    android:background="#F5F7EE"
+    android:padding="16dp">
 
     <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-        android:orientation="vertical"
-    android:background="#F5F7EE">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#4CAF50"
-        android:text="←"
-        android:gravity="center"
-        android:paddingRight="300dp"
-        android:paddingBottom="15dp"
-        android:textSize="40dp"
-        android:textColor="@color/white"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="115dp"
-            android:background="#4CAF50"
-            android:elevation="10dp"
-            android:orientation="vertical">
-
-            <include layout="@layout/item_rewardlayout" />
-
-            <include layout="@layout/item_rewardlayout" />
-
-            <include layout="@layout/item_rewardlayout" />
-
-            <include layout="@layout/item_rewardlayout" />
-
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="570dp"
-        android:backgroundTint="#FFFFFF"
-        android:elevation="10dp">
-
-        <include layout="@layout/nav_bar_layout" />
-
-    </RelativeLayout>
-
-    <LinearLayout
+        android:id="@+id/card_points"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginRight="15dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#4CAF50"
         android:elevation="10dp"
-        android:textColor="@color/white">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.7"
+            android:layout_weight="1.2"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:paddingRight="30dp"
             android:text="My Points"
             android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textSize="25sp" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
@@ -88,9 +35,30 @@
             android:backgroundTint="#F5F7EE"
             android:gravity="center"
             android:text="1000"
-            android:textSize="20dp" />
-
+            android:textColor="#4CAF50"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
-</FrameLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card_points"
+        android:layout_marginTop="16dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_rewardlayout" />
+
+            <include layout="@layout/item_rewardlayout" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

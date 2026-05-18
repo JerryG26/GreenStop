@@ -3,12 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="@drawable/rounded_corner"
-    android:layout_marginTop="15dp"
-    android:layout_marginRight="18dp"
-    android:layout_marginLeft="18dp"
-    android:backgroundTint="#F5F7EE"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_margin="5dp"
+    android:background="@drawable/rounded_and_border" android:elevation="5dp" android:padding="6dp">
 
 
     <ImageView
@@ -22,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.25"
+
         android:layout_marginRight="10dp"
         android:orientation="vertical">
 
@@ -32,6 +30,8 @@
             android:text="RewardTitle"
             android:padding="10dp"
             android:fontFamily="sans-serif"
+            android:textColor="#212121"
+            android:textStyle="bold"
             android:textSize="18dp"/>
         <TextView
             android:layout_width="match_parent"

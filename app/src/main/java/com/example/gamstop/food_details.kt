@@ -1,12 +1,10 @@
-// AFTER (Correct)
 package com.example.gamstop
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 
-// We change AppCompatActivity to Fragment, and point it to your calendar layout file
-class CalendarFragment : Fragment(R.layout.activity_calendar_calorie_tracker) {
+class FoodDetailFragment : Fragment(R.layout.activity_food_details) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
