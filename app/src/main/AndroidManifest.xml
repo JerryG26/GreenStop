@@ -15,15 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gamstop">
-        <activity
-            android:name=".foods_showcase"
-            android:exported="false" />
-        <activity
-            android:name=".restaurant_page"
-            android:exported="false" />
-        <activity
-            android:name=".home"
-            android:exported="false" />
+
         <activity
             android:name=".main_activity_container"
             android:exported="true">
@@ -33,18 +25,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".calendar_calorie_tracker"
-            android:exported="true" />
-        <activity
-            android:name=".food_layout"
-            android:exported="false" />
+
         <activity
             android:name=".registration"
             android:exported="false" />
-        <activity
-            android:name=".reward_page"
-            android:exported="false" />
+
         <activity
             android:name=".login_page"
             android:exported="false" />
