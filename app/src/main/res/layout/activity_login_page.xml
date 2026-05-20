@@ -114,8 +114,8 @@
             android:layout_height="match_parent"
             android:src="@drawable/google"
             android:clickable="true"
-            android:focusable="true" />
-
+            android:focusable="true"
+            android:onClick="openGoogleLink" />
         <ImageView
             android:id="@+id/facebookIcon"
             android:layout_width="0dp"
@@ -123,8 +123,8 @@
             android:layout_height="match_parent"
             android:src="@drawable/facebook"
             android:clickable="true"
-            android:focusable="true" />
-
+            android:focusable="true"
+            android:onClick="openFacebookLink" />
         <ImageView
             android:id="@+id/phoneIcon"
             android:layout_width="0dp"
@@ -132,7 +132,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/phone"
             android:clickable="true"
-            android:focusable="true" />
-
+            android:focusable="true"
+            android:onClick="openPhoneLink" />
     </LinearLayout>
 </LinearLayout>

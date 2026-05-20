@@ -8,6 +8,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.View
+import android.net.Uri
 
 class login_page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,5 +36,20 @@ class login_page : AppCompatActivity() {
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }
+    }
+    fun openFacebookLink(view: View) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com"))
+        startActivity(intent)
+    }
+
+    fun openGoogleLink(view: View) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+        startActivity(intent)
+    }
+
+    fun openPhoneLink(view: View) {
+        // This opens a webpage, but you can also use "tel:123456789" to open the dialer!
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+        startActivity(intent)
     }
 }
