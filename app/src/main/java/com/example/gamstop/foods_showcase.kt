@@ -28,6 +28,8 @@ class FoodShowcaseFragment : Fragment() {
         var selectedFoodProtein: String = ""
         var selectedFoodCarbs: String = ""
         var selectedFoodFat: String = ""
+
+        var selectedFoodImage: Int = 0
     }
 
     override fun onCreateView(
