@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#F5F7EE"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".login_page">
 
     <TextView
         android:layout_width="match_parent"
@@ -126,13 +126,13 @@
             android:focusable="true"
             android:onClick="openFacebookLink" />
         <ImageView
-            android:id="@+id/phoneIcon"
+            android:id="@+id/appleIcon"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:src="@drawable/phone"
+            android:src="@drawable/apple_icon"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="openPhoneLink" />
+            android:onClick="openAppleLink" />
     </LinearLayout>
 </LinearLayout>

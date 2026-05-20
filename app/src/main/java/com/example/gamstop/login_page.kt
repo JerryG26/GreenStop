@@ -47,9 +47,8 @@ class login_page : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun openPhoneLink(view: View) {
-        // This opens a webpage, but you can also use "tel:123456789" to open the dialer!
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com"))
+    fun openAppleLink(view: View) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.apple.com"))
         startActivity(intent)
     }
 }
