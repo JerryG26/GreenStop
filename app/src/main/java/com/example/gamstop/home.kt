@@ -5,7 +5,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 
 // We inherit from Fragment and pass your home layout file directly into the constructor
-class HomeFragment : Fragment(R.layout.activity_home) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
