@@ -31,7 +31,7 @@ class main_activity_container : AppCompatActivity() {
         btnCalendar.setOnClickListener {
             tvTitle.text = "Calorie Tracking Calendar"
 
-            tvBack.text = "←"
+            tvBack.text = ""
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, CalendarFragment())
                 .commit()
@@ -39,7 +39,7 @@ class main_activity_container : AppCompatActivity() {
 
         btnReward.setOnClickListener {
             tvTitle.text = "My Rewards"
-            tvBack.text = "←"
+            tvBack.text = ""
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, RewardFragment())
                 .commit()
@@ -47,17 +47,27 @@ class main_activity_container : AppCompatActivity() {
 
         btnHome.setOnClickListener {
             tvTitle.text = "Home"
-            tvBack.text = "←"
+            tvBack.text = ""
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment())
                 .commit()
         }
         btnRestaurant.setOnClickListener {
             tvTitle.text = "Restaurant"
-            tvBack.text = "←"
+            tvBack.text = ""
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, RestaurantFragment())
                 .commit()
+        }
+        tvBack.setOnClickListener {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                supportFragmentManager.popBackStack()
+
+                  if (supportFragmentManager.backStackEntryCount == 1) {
+                    tvTitle.text = "Restaurant"
+                    tvBack.text = ""
+                }
+            }
         }
 
     }
