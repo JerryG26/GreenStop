@@ -5,6 +5,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamstop.frontend.ProfileFragment
+import com.example.gamstop.frontend.navigation.calendar_calorie_tracker
 
 class main_activity_container : AppCompatActivity() {
 
@@ -32,10 +33,9 @@ class main_activity_container : AppCompatActivity() {
         // Listen for navigation clicks
         btnCalendar.setOnClickListener {
             tvTitle.text = "Calorie Tracking Calendar"
-
             tvBack.text = ""
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, CalendarFragment())
+                .replace(R.id.fragment_container, calendar_calorie_tracker())
                 .commit()
         }
 

@@ -1,7 +1,10 @@
 package com.example.gamstop.frontend.calorie_stats
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gamstop.databinding.ActivityDailyCalStatsBinding
@@ -17,6 +20,34 @@ class DailyCalStatsActivity : AppCompatActivity() {
     private var dailyCalorieGoal = 2000
     private val mockRecords = mutableListOf<CalorieEntity>()
 
+    private val addMealLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == RESULT_OK) {
+            val data = result.data
+            val foodName = data?.getStringExtra("FOOD_NAME") ?: "Unknown Meal"
+            val calories = data?.getIntExtra("CALORIES", 0) ?: 0
+
+            val currentTotal = mockRecords.sumOf { it.calories }
+
+            if (currentTotal + calories > dailyCalorieGoal) {
+                val remaining = dailyCalorieGoal - currentTotal
+                Toast.makeText(
+                    this,
+                    "Cannot log $foodName ($calories kcal). You only have $remaining kcal left!",
+                    Toast.LENGTH_LONG
+                ).show()
+            } else {
+                val currentTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date())
+                val newMeal = CalorieEntity(
+                    time = currentTime,
+                    foodName = foodName,
+                    calories = calories
+                )
+                mockRecords.add(newMeal)
+                updateUI()
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDailyCalStatsBinding.inflate(layoutInflater)
@@ -29,15 +60,19 @@ class DailyCalStatsActivity : AppCompatActivity() {
         loadInitialFakeData()
 
         binding.addButton.setOnClickListener {
-            insertNewMeal()
+            val intent = Intent(this, AddMealActivity::class.java)
+            addMealLauncher.launch(intent)
         }
     }
 
     private fun setupRecyclerView() {
         binding.recordsRecyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = CalorieRecordAdapter(emptyList()) { record ->
-            deleteMeal(record)
+
+        adapter = CalorieRecordAdapter(emptyList()) { recordToDelete ->
+            mockRecords.remove(recordToDelete)
+            updateUI()
         }
+
         binding.recordsRecyclerView.adapter = adapter
     }
 
@@ -46,22 +81,6 @@ class DailyCalStatsActivity : AppCompatActivity() {
             mockRecords.add(CalorieEntity(time = "08:30 AM", foodName = "Oatmeal & Fruits", calories = 350))
             mockRecords.add(CalorieEntity(time = "12:15 PM", foodName = "Grilled Chicken Salad", calories = 450))
         }
-        updateUI()
-    }
-
-    private fun insertNewMeal() {
-        val currentTime = SimpleDateFormat("hh:mm a", Locale.getDefault()).format(Date())
-        val newMeal = CalorieEntity(
-            time = currentTime,
-            foodName = "Healthy Snack",
-            calories = 250
-        )
-        mockRecords.add(newMeal)
-        updateUI()
-    }
-
-    private fun deleteMeal(record: CalorieEntity) {
-        mockRecords.remove(record)
         updateUI()
     }
 

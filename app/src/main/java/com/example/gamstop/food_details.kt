@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 
 class FoodDetailFragment : Fragment() {
@@ -19,20 +20,15 @@ class FoodDetailFragment : Fragment() {
 
         val tvFoodName = view.findViewById<TextView>(R.id.foodTitle)
         val tvFoodDesc = view.findViewById<TextView>(R.id.foodDescription)
-        val tvCalorieCount = view.findViewById<TextView>(R.id.txtCalorieCount)
-        val tvProteinCount = view.findViewById<TextView>(R.id.txtProteinCount)
-        val tvCarbsCount = view.findViewById<TextView>(R.id.txtCarbsCount)
-        val tvFatCount = view.findViewById<TextView>(R.id.txtFatCount)
+        val tvCalorieCount = view.findViewById<TextView>(R.id.foodCalories)
         val imgFood = view.findViewById<ImageView>(R.id.foodImage)
+        val btnOrder = view.findViewById<Button>(R.id.btnOrderNow)
 
         val foodNameData = FoodShowcaseFragment.selectedFoodName
 
         tvFoodName.text = foodNameData
         tvFoodDesc.text = FoodShowcaseFragment.selectedFoodDesc
         tvCalorieCount.text = FoodShowcaseFragment.selectedFoodCal
-        tvProteinCount.text = FoodShowcaseFragment.selectedFoodProtein
-        tvCarbsCount.text = FoodShowcaseFragment.selectedFoodCarbs
-        tvFatCount.text = FoodShowcaseFragment.selectedFoodFat
 
         if (foodNameData == "Pad Thai") {
             imgFood.setImageResource(R.drawable.padthai)
@@ -48,7 +44,10 @@ class FoodDetailFragment : Fragment() {
             imgFood.setImageResource(R.drawable.halohalo)
         }
 
-
+        btnOrder.setOnClickListener {
+            Toast.makeText(requireContext(), "$foodNameData Ordered & Logged!", Toast.LENGTH_LONG).show()
+            requireActivity().supportFragmentManager.popBackStack()
+        }
 
         return view
     }

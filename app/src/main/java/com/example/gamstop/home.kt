@@ -26,7 +26,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         binding.btnCalorieStats.setOnClickListener {
-            startActivity(Intent(requireContext(), DailyCalStatsActivity::class.java))
+            startActivity(Intent(requireContext(), com.example.gamstop.frontend.calorie_stats.DailyCalStatsActivity::class.java))
         }
 
         binding.btnGpsNavigation.setOnClickListener {

@@ -53,6 +53,10 @@
             android:name=".frontend.calorie_stats.DailyCalStatsActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".frontend.calorie_stats.AddMealActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
