@@ -22,7 +22,9 @@ class SmartRecommendationsActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        binding.recommendationsRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        // Changed to default vertical orientation
+        binding.recommendationsRecyclerView.layoutManager = LinearLayoutManager(this)
+
         recommendationAdapter = FoodRecommendationAdapter(emptyList())
         binding.recommendationsRecyclerView.adapter = recommendationAdapter
     }

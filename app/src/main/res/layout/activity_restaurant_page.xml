@@ -10,7 +10,10 @@
         android:id="@+id/recyclerViewRestaurants"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="12dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="90dp"
         android:clipToPadding="false"
         tools:listitem="@layout/item_restaurant" />
 </LinearLayout>

@@ -5,8 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamstop.databinding.ItemCalorieRecordBinding
 
-class CalorieRecordAdapter(private var records: List<CalorieEntity>) :
-    RecyclerView.Adapter<CalorieRecordAdapter.RecordViewHolder>() {
+class CalorieRecordAdapter(
+    private var records: List<CalorieEntity>,
+    private val onDeleteClick: (CalorieEntity) -> Unit // The callback for deletion
+) : RecyclerView.Adapter<CalorieRecordAdapter.RecordViewHolder>() {
 
     class RecordViewHolder(val binding: ItemCalorieRecordBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -20,6 +22,11 @@ class CalorieRecordAdapter(private var records: List<CalorieEntity>) :
         holder.binding.timeText.text = record.time
         holder.binding.foodNameText.text = record.foodName
         holder.binding.caloriesText.text = "Cals taken: ${record.calories}"
+
+        // Wire up the delete button click
+        holder.binding.deleteButton.setOnClickListener {
+            onDeleteClick(record)
+        }
     }
 
     override fun getItemCount(): Int = records.size

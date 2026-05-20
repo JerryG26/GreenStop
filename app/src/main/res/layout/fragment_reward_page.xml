@@ -49,7 +49,7 @@
         android:layout_marginTop="16dp"
         android:scrollbars="none"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
+        android:paddingBottom="90dp"
         tools:listitem="@layout/item_rewardlayout" />
 
 </RelativeLayout>

@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:background="#F5F7EE"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -21,16 +20,13 @@
         android:layout_marginTop="45dp"
         android:layout_marginBottom="20dp"
         android:scaleType="centerInside"
-
         android:src="@drawable/greenstop_logo" />
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="horizontal">
-
 
         <ImageView
             android:layout_width="50dp"
@@ -47,18 +43,13 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/border"/>
 
-
-
     </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="horizontal">
-
 
         <ImageView
             android:layout_width="50dp"
@@ -75,8 +66,6 @@
             android:inputType="textPassword"
             android:background="@drawable/border"/>
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -87,6 +76,7 @@
         android:gravity="center_vertical">
 
         <TextView
+            android:id="@+id/registerLink"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
@@ -97,15 +87,14 @@
             android:textSize="15dp"/>
 
         <Button
+            android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
             android:backgroundTint="#4CAF50"
             android:layout_marginBottom="20dp"
-            android:text="Submit"
-            android:id="@+id/submit"/>
-
+            android:text="Submit" />
 
     </LinearLayout>
 
@@ -117,30 +106,33 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
+
         <ImageView
+            android:id="@+id/googleIcon"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:src="@drawable/google"
             android:clickable="true"
-            android:focusable="true"
-            android:id="@+id/googleIcon"/>
+            android:focusable="true" />
+
         <ImageView
+            android:id="@+id/facebookIcon"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:src="@drawable/facebook"
             android:clickable="true"
-            android:focusable="true"
-            android:id="@+id/facebookIcon"/>
+            android:focusable="true" />
+
         <ImageView
+            android:id="@+id/phoneIcon"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:src="@drawable/phone"
             android:clickable="true"
-            android:focusable="true"
-            android:id="@+id/phoneIcon"/>
+            android:focusable="true" />
 
     </LinearLayout>
 </LinearLayout>
