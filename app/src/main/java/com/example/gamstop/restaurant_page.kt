@@ -26,8 +26,8 @@ class RestaurantFragment : Fragment() {
         val view = inflater.inflate(R.layout.activity_restaurant_page, container, false)
 
         val restaurantList = ArrayList<Restaurant>()
-        restaurantList.add(Restaurant("Thai Foodies", "Thai • 4.8 ★", R.drawable.thai_restaurant))
-        restaurantList.add(Restaurant("Filipino Kusina", "Filipino • 5.0 ★", R.drawable.filipino_restaurant))
+        restaurantList.add(Restaurant("Thai Foodies", "Thai • 4.8 ★ • 285m away", R.drawable.thai_restaurant))
+        restaurantList.add(Restaurant("Filipino Kusina", "Filipino • 5.0 ★ • 350m away", R.drawable.filipino_restaurant))
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewRestaurants)
         recyclerView.layoutManager = LinearLayoutManager(activity)
