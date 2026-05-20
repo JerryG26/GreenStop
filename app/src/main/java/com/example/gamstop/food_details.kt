@@ -1,5 +1,6 @@
 package com.example.gamstop
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -45,7 +46,9 @@ class FoodDetailFragment : Fragment() {
         }
 
         btnOrder.setOnClickListener {
-            Toast.makeText(requireContext(), "$foodNameData Ordered & Logged!", Toast.LENGTH_LONG).show()
+            val sharedPreferences = requireActivity().getSharedPreferences("GreenStopPrefs", Context.MODE_PRIVATE)
+            val currentPoints = sharedPreferences.getInt("USER_POINTS", 1250)
+            sharedPreferences.edit().putInt("USER_POINTS", currentPoints + 50).apply()
             requireActivity().supportFragmentManager.popBackStack()
         }
 
