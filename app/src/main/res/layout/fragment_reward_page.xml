@@ -27,6 +27,7 @@
             android:textSize="25sp" />
 
         <TextView
+            android:id="@+id/txtTotalPoints"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
@@ -34,31 +35,21 @@
             android:background="@drawable/rounded_corner"
             android:backgroundTint="#F5F7EE"
             android:gravity="center"
-            android:text="1000"
+            android:text="current_points"
             android:textColor="#4CAF50"
             android:textSize="20sp" />
 
     </LinearLayout>
 
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRewards"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/card_points"
         android:layout_marginTop="16dp"
-        android:scrollbars="none">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="5dp"
-            android:orientation="vertical">
-
-            <include layout="@layout/item_rewardlayout" />
-
-            <include layout="@layout/item_rewardlayout" />
-
-
-        </LinearLayout>
-    </ScrollView>
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        tools:listitem="@layout/item_rewardlayout" />
 
 </RelativeLayout>

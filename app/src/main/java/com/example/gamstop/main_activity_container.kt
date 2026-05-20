@@ -16,6 +16,7 @@ class main_activity_container : AppCompatActivity() {
         val btnCalendar = btnNavbar.findViewById<ImageView>(R.id.btn_calendar_container)
         val btnReward = btnNavbar.findViewById<ImageView>(R.id.btn_rewards_container)
         val btnHome = btnNavbar.findViewById<ImageView>(R.id.btn_home_container)
+        val btnProfile = btnNavbar.findViewById<ImageView>(R.id.btn_profile_container)
         val btnRestaurant = btnNavbar.findViewById<ImageView>(R.id.btn_restaurants_container)
 
         // Set default screen on app launch
@@ -57,6 +58,13 @@ class main_activity_container : AppCompatActivity() {
             tvBack.text = ""
             supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, RestaurantFragment())
+                .commit()
+        }
+        btnProfile.setOnClickListener {
+            tvTitle.text = "Profile"
+            tvBack.text = ""
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProfileFragment())
                 .commit()
         }
         tvBack.setOnClickListener {
