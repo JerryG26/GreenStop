@@ -22,22 +22,11 @@
             android:layout_weight="1.2"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="My Points"
+            android:text="My Rewards"
             android:textColor="@color/white"
             android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/txtTotalPoints"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_margin="15dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#F5F7EE"
-            android:gravity="center"
-            android:text="current_points"
-            android:textColor="#4CAF50"
-            android:textSize="20sp" />
+
 
     </LinearLayout>
 

@@ -19,15 +19,13 @@ class RewardFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_reward_page, container, false)
 
-        val tvTotalPoints = view.findViewById<TextView>(R.id.txtTotalPoints)
-        tvTotalPoints.text = "1250"
 
         val rewardsList = ArrayList<RewardItem>()
-        rewardsList.add(RewardItem("You have been rewarded 50 points", "Click to redeem"))
-        rewardsList.add(RewardItem("You have been rewarded 150 points", "Click to redeem"))
-        rewardsList.add(RewardItem("You have been rewarded 250 points", "Click to redeem"))
-        rewardsList.add(RewardItem("You have been rewarded 10 points", "Click to redeem"))
-        rewardsList.add(RewardItem("You have been rewarded 100 points", "Click to redeem"))
+        rewardsList.add(RewardItem("You have been rewarded 50% off Thai Foodies", "Click to redeem"))
+        rewardsList.add(RewardItem("You have been rewarded a free pad thai", "Click to redeem"))
+        rewardsList.add(RewardItem("You have been rewarded a free halo halo ", "Click to redeem"))
+        rewardsList.add(RewardItem("You have been rewarded a free mango sticky rice", "Click to redeem"))
+        rewardsList.add(RewardItem("You have been rewarded 10% off Filipino Kusina", "Click to redeem"))
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewRewards)
         recyclerView.layoutManager = LinearLayoutManager(activity)
